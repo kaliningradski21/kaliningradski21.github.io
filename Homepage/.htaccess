@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "Protected Site"
-AuthUserFile .htpasswd
+AuthUserFile Homepage/.htpasswd
 require valid-user

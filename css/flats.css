@@ -139,3 +139,12 @@ p {
 		word-break: break-word;
 	}
 }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 620px) {
+	.flat_status_container {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 5px;
+	}
+}

@@ -1,0 +1,114 @@
+table.main {
+	width: 98.5%;
+	margin: 0px 0px 30px 7px;
+	border: 2px solid Black;
+	border-spacing: 0px;
+	border-radius: 15px;
+}
+table.main tr {
+	text-align: center;
+	vertical-align: top;
+}
+table.main td {
+	border: 0px;
+	padding: 2px;
+	opacity: 0.85;
+}
+table.main td.unit, td.unit-sale, td.unit-rent {
+	width: 4%;
+}
+table.main td.floor {
+	width: 2%;
+	text-align: center;
+	vertical-align: middle;
+	color: Black;
+	font-size: 130%;
+	font-weight: bold;
+	border-right: 2px solid Black;
+	border-radius: 15px 0px 0px 15px;
+}
+table.main .unit:not(.first-left), table.main .unit-sale:not(.first-left), table.main .unit-rent:not(.first-left) {
+	border-left: 2px solid Black;
+	padding-bottom: 10px;
+}
+table.main .last-right-top {
+	border-radius: 0px 15px 0px 0px;
+}
+table.main .last-right-bottom {
+	border-radius: 0px 0px 15px 0px;
+}
+table.main .last-right {
+	border-right: 2px solid Black;
+}
+.unit {
+	background-color: LightGrey;
+}
+.unit-sale {
+	background-color: #cdf097;
+}
+.unit-rent {
+	background-color: #aae3e2;
+}
+table.main .unit-square-bottom {
+	background-color: Gold;
+	border-bottom: 2px solid Black;
+}
+table.main .unit-square-bottom:not(.first-left) {
+	border-left: 2px solid Black;
+}
+table.main .unit-square-top {
+	background-color: Gold;
+	border-top: 2px solid Black;
+}
+table.main .unit-square-top:not(.first-left) {
+	border-left: 2px solid Black;
+}
+.unit-road {
+	background-color: #6e6e6e;
+}
+.unit-number {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+p.unit-number span {
+	color: White;
+	font-weight: bold;
+	background-color: Black;
+	padding: 1px 5px;
+}
+p.unit-owner span {
+	word-break: break-word;
+}
+table.legend {
+	margin-left: 10px;
+	border: 1px solid #6e6e6e;
+	border-spacing: 0px;
+	border-radius: 5px;
+	opacity: 0.8;
+	background-color: #eeeeee;
+}
+table.legend td {
+	border: 0px;
+	padding-left: 10px;
+	vertical-align: top;
+}
+table.legend td:not(.abbreviation) {
+	padding-right: 15px;
+}
+table.legend td.top-left {
+	border-radius: 5px 0px 0px 0px;
+}
+table.legend td.bottom-left {
+	border-radius: 0px 0px 0px 5px;
+}
+.abbreviation {
+	color: White;
+	background-color: #393939;
+	padding-right: 5px;
+}
+table.info {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	color: white;
+}

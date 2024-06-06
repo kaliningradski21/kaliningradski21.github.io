@@ -27,7 +27,7 @@
 	background-color: black;
 }
 .slide-name {
-	padding: 16px;
+	padding: 15px;
 	color: #fff;
 	background-color: #000;
 }
@@ -102,8 +102,19 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+	.slider-content {
+		margin: 15px;
+		max-width: 360px;
+	}
+	.image-background {
+		max-width: 360px;
+		height: 243px;
+	}
 	.slider-title {
 		font-size: 150%;
+	}
+	.slide-name {
+		padding: 12px;
 	}
 }
 
@@ -113,9 +124,17 @@
 		margin-top: 10px;
 		margin-left: auto;
     margin-right: auto;
+		max-width: 320px;
+	}
+	.image-background {
+		max-width: 320px;
+		height: 216px;
 	}
 	.slider-title {
 		font-size: 120%;
 		text-shadow: 0 0 2px black, 0 0 3px black;
+	}
+	.slide-name {
+		padding: 10px;
 	}
 }

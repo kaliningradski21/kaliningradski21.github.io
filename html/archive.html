@@ -38,16 +38,16 @@
 		</nav>
 	</header>
 	
-	<!-- Slideshow -->
-	<div class="display-container slider-content">
-
-		<div class="display-container slider-title">
-			Фотогалерея (2018-2024)
-		</div>
+	<div class="display-container slider-title"> 
+		<a onclick="myFunction(1)">Фотогалерея (2018-2024)</a>
+	</div>
+			
+	<!-- Slideshow 1 -->
+	<div id="1" class="display-container slider-content">
 		
 		<div class="display-container slider-shadow">
 			
-			<div class="display-container slide">
+			<div class="display-container slide1">
 				<a href="../resources/images/slideshow/01.jpg" target="_blank">
 					<div class="image-background" style="background-image:url('../resources/images/slideshow/01.jpg')"></div>
 				</a> 
@@ -56,7 +56,7 @@
 				</div>
 			</div>
 			
-			<div class="display-container slide">
+			<div class="display-container slide1">
 				<a href="../resources/images/slideshow/02.jpg" target="_blank">
 					<div class="image-background" style="background-image:url('../resources/images/slideshow/02.jpg')"></div>
 				</a> 
@@ -65,7 +65,7 @@
 				</div>
 			</div>
 			
-			<div class="display-container slide">
+			<div class="display-container slide1">
 				<a href="../resources/images/slideshow/03.jpg" target="_blank">
 					<div class="image-background" style="background-image:url('../resources/images/slideshow/03.jpg')"></div>
 				</a> 
@@ -74,7 +74,7 @@
 				</div>
 			</div>
 			
-			<div class="display-container slide">
+			<div class="display-container slide1">
 				<a href="../resources/images/slideshow/04.jpg" target="_blank">
 					<div class="image-background" style="background-image:url('../resources/images/slideshow/04.jpg')"></div>
 				</a> 
@@ -83,7 +83,7 @@
 				</div>
 			</div>
 			
-			<div class="display-container slide">
+			<div class="display-container slide1">
 				<a href="../resources/images/slideshow/05.jpg" target="_blank">
 					<div class="image-background" style="background-image:url('../resources/images/slideshow/05.jpg')"></div>
 				</a> 
@@ -93,28 +93,127 @@
 			</div>
 			
 			
-			<button class="button display-left" onclick="plusDivs(-1)">&#10094;</button>
-			<button class="button display-right" onclick="plusDivs(1)">&#10095;</button>
+			<button class="button display-left" onclick="plusDivs(-1,1)">&#10094;</button>
+			<button class="button display-right" onclick="plusDivs(1,1)">&#10095;</button>
 		</div>
 	</div>
+	
+	<div class="display-container slider-title"> 
+		<a onclick="myFunction(2)">Другие фото</a>
+	</div>
+	
+	<!-- Slideshow 2 -->
+	<div id="2" class="display-container slider-content">
+		
+		<div class="display-container slider-shadow">
+			
+			<div class="display-container slide2">
+				<a href="../resources/images/slideshow/01.jpg" target="_blank">
+					<div class="image-background" style="background-image:url('../resources/images/slideshow/01.jpg')"></div>
+				</a> 
+				<div class="slide-name display-bottomright">
+					сентябрь 2023 г.
+				</div>
+			</div>
+			
+			<div class="display-container slide2">
+				<a href="../resources/images/slideshow/02.jpg" target="_blank">
+					<div class="image-background" style="background-image:url('../resources/images/slideshow/02.jpg')"></div>
+				</a> 
+				<div class="slide-name display-bottomright">
+					сентябрь 2023 г.
+				</div>
+			</div>
+			
+			<div class="display-container slide2">
+				<a href="../resources/images/slideshow/03.jpg" target="_blank">
+					<div class="image-background" style="background-image:url('../resources/images/slideshow/03.jpg')"></div>
+				</a> 
+				<div class="slide-name display-bottomright">
+					сентябрь 2023 г.
+				</div>
+			</div>
+			
+			<div class="display-container slide2">
+				<a href="../resources/images/slideshow/04.jpg" target="_blank">
+					<div class="image-background" style="background-image:url('../resources/images/slideshow/04.jpg')"></div>
+				</a> 
+				<div class="slide-name display-bottomright">
+					сентябрь 2023 г.
+				</div>
+			</div>
+			
+			<div class="display-container slide2">
+				<a href="../resources/images/slideshow/05.jpg" target="_blank">
+					<div class="image-background" style="background-image:url('../resources/images/slideshow/05.jpg')"></div>
+				</a> 
+				<div class="slide-name display-bottomright">
+					сентябрь 2023 г.
+				</div>
+			</div>
+			
+			
+			<button class="button display-left" onclick="plusDivs(-1,2)">&#10094;</button>
+			<button class="button display-right" onclick="plusDivs(1,2)">&#10095;</button>
+		</div>
+	</div>
+	
 
 	<script>
-		var slideIndex = 1;
-		showDivs(slideIndex);
+		var slideIndex1 = 1;
+		var slideIndex2 = 1;
+		
+		showDivs(slideIndex1,1);
+		showDivs(slideIndex2,2);
 
-		function plusDivs(n) {
-			showDivs(slideIndex += n);
+		function plusDivs(n,slideId) {
+			switch (slideId) {
+				case 1:
+					showDivs(slideIndex1 += n,slideId);
+					break;
+				case 2:
+					showDivs(slideIndex2 += n,slideId);
+			}
 		}
 
-		function showDivs(n) {
+		function showDivs(n,slideId) {
 			var i;
-			var x = document.getElementsByClassName("slide");
-			if (n > x.length) {slideIndex = 1}
-			if (n < 1) {slideIndex = x.length}
-			for (i = 0; i < x.length; i++) {
-				x[i].style.display = "none";  
+			var elements = document.getElementsByClassName("slide" + slideId);
+			
+			switch (slideId) {
+				case 1:
+					if (n > elements.length) {slideIndex1 = 1}
+					if (n < 1) {slideIndex1 = elements.length}
+					for (i = 0; i < elements.length; i++) {
+						elements[i].style.display = "none";  
+					}
+					elements[slideIndex1-1].style.display = "block";
+					break;
+				case 2:
+					if (n > elements.length) {slideIndex2 = 1}
+					if (n < 1) {slideIndex2 = elements.length}
+					for (i = 0; i < elements.length; i++) {
+						elements[i].style.display = "none";  
+					}
+					elements[slideIndex2-1].style.display = "block";
 			}
-			x[slideIndex-1].style.display = "block";  
+			  
+		}
+		
+		function myFunction(id) {
+			var element = document.getElementById(id);
+			var displayStyle = element.style.display;
+			const collection = document.getElementsByClassName("display-container slider-content");
+			
+			for (var i = 0; i < collection.length; i++) {
+				 collection[i].style.display = 'none';
+			}
+			
+			if (displayStyle !== 'block') {
+				element.style.display = 'block';
+			} else {
+				element.style.display = 'none';
+			}
 		}
 	</script>
 	

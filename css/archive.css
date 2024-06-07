@@ -1,4 +1,5 @@
 .slider-content {
+	display: none;
 	margin: 20px;
 	max-width: 400px;
 }
@@ -9,15 +10,26 @@
 	box-shadow: 0 0 15px silver, 0 0 15px silver;
 }
 .slider-title {
-	padding-bottom: 15px;
+	margin-left: 20px;
+	margin-top: 20px;
 	font-size: 170%;
 	color: #fecf2f;
-	text-align: center;
+	text-align: left;
 	text-shadow: 0 0 3px black, 0 0 4px black;
 }
-.slide {
+a {
+	text-decoration: none;
+}
+a:hover {
+	cursor: pointer;
+}
+.slide1 {
 	display: none;
 }
+.slide2 {
+	display: none;
+}
+	
 .image-background {
 	max-width: 400px;
 	height: 270px;

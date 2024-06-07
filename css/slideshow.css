@@ -1,0 +1,101 @@
+.slider-content {
+	margin: 20px auto;
+	max-width: 400px;
+}
+.display-container {
+	position: relative;
+}
+.slider-shadow {
+	box-shadow: 0 0 15px black, 0 0 15px black;
+}
+.slider-title {
+	padding-bottom: 15px;
+	font-size: 170%;
+	color: #fecf2f;
+	text-align: center;
+	text-shadow: 0 0 3px black, 0 0 4px black;
+}
+.slide {
+	display: none;
+}
+.image-background {
+	max-width: 400px;
+	height: 268px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: black;
+}
+.slide-name {
+	padding: 15px;
+	color: #fff;
+	background-color: #000;
+}
+.display-bottomleft {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.display-bottomright {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.display-bottommiddle {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%,0%);
+	-ms-transform: translate(-50%,0%)
+}
+.display-left {
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	transform: translate(0%,-50%);
+	-ms-transform :translate(-0%,-50%);
+}
+.display-right {
+	position: absolute;
+	top: 50%;
+	right: 0%;
+	transform: translate(0%,-50%);
+	-ms-transform: translate(0%,-50%);
+}
+.display-middle {
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+}
+.display-topmiddle {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translate(-50%,0%);
+	-ms-transform: translate(-50%,0%);
+}
+.button {
+	border: none;
+	display: inline-block;
+	padding: 8px 16px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	color: #fff;
+	background-color: #000;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+} 
+.button:hover {
+	color: #000;
+	background-color: #ccc;
+}

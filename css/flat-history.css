@@ -21,9 +21,12 @@ table.main td {
 	padding-top: 5px;
 	vertical-align: top;
 }
-.title {
-	font-weight: bold;
+span.info {
+	font-size: 90%;
 }
 td.title {
 	padding-right: 10px;
+}
+.title {
+	font-weight: bold;
 }

@@ -1,7 +1,7 @@
 .slider-content {
 	display: none;
 	margin: 20px;
-	max-width: 400px;
+	max-width: 440px;
 }
 .display-container {
 	position: relative;
@@ -13,15 +13,27 @@
 	margin-left: 20px;
 	margin-top: 20px;
 	font-size: 170%;
-	color: #fecf2f;
+	color: white;
+	/*color: #fecf2f;*/
 	text-align: left;
 	text-shadow: 0 0 3px black, 0 0 4px black;
 }
 a {
 	text-decoration: none;
 }
-a:hover {
+a.active {
+	color: #fecf2f;
+}
+a.alink:active {
+	color: #fecf2f;
+}
+a.alink:hover {
 	cursor: pointer;
+	color: #fecf2f;
+}
+a.alink:visited {
+	cursor: pointer;
+	color: white;
 }
 .slide1 {
 	display: none;
@@ -31,8 +43,8 @@ a:hover {
 }
 	
 .image-background {
-	max-width: 400px;
-	height: 270px;
+	max-width: 440px;
+	height: 300px;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: contain;

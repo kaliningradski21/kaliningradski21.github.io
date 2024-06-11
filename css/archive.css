@@ -54,6 +54,7 @@ a.alink:visited {
 	padding: 15px;
 	color: #fff;
 	background-color: #000;
+	font-size: 120%;
 }
 .display-bottomleft {
 	position: absolute;

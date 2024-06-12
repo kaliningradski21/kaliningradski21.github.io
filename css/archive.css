@@ -41,7 +41,9 @@ a.alink:visited {
 .slide2 {
 	display: none;
 }
-	
+.slide3 {
+	display: none;
+}
 .image-background {
 	max-width: 440px;
 	height: 300px;

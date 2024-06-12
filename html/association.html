@@ -41,56 +41,121 @@
 	
 	<div class="links-container">
 	
-		<div class="file">
-			<div class="file-icon">
-				<a href="../resources/files/ustav_2019.pdf" target="_blank"><img class="pdf"></a>
-			</div>
-			<div class="file-name">
-				<span>Устав ТС (2019)</span>
-			</div>
+		<!-- Section Documents -->
+		<div class="section"> 
+			<a id="adoc" class="alink" onclick="showGallery('doc')">Документы</a>
 		</div>
 		
-		<div class="file">
-			<div class="file-icon">
-				<a href="../resources/files/complect_parking.pdf" target="_blank"><img class="pdf"></a>
+		<div id="doc" class="section-content">
+			<div class="file">
+				<div class="file-icon">
+					<a href="../resources/files/ustav_2019.pdf" target="_blank"><img class="pdf"></a>
+				</div>
+				<div class="file-name">
+					<span><a href="../resources/files/ustav_2019.pdf" class="alink" target="_blank">Устав ТС (2019)</a></span>
+				</div>
 			</div>
-			<div class="file-name">
-				<span>КОМПЛЕКТ. Автостоянка</span>
+			
+			<div class="file">
+				<div class="file-icon">
+					<a href="../resources/files/complect_parking.pdf" target="_blank"><img class="pdf"></a>
+				</div>
+				<div class="file-name">
+					<span><a href="../resources/files/complect_parking.pdf" class="alink" target="_blank">КОМПЛЕКТ. Автостоянка</a></span>
+				</div>
 			</div>
+			
+			<div class="file">
+				<div class="file-icon">
+					<a href="../resources/files/complect_house.pdf" target="_blank"><img class="pdf"></a>
+				</div>
+				<div class="file-name">
+					<span><a href="../resources/files/complect_house.pdf" class="alink" target="_blank">КОМПЛЕКТ. Жилой дом</a></span>
+				</div>
+			</div>
+		</div>
+		<!-- End Section Documents -->
+		
+		<!-- Section Meetings -->
+		<div class="section"> 
+			<a id="ameeting" class="alink" onclick="showGallery('meeting')">Собрания ТС</a>
 		</div>
 		
-		<div class="file">
-			<div class="file-icon">
-				<a href="../resources/files/complect_house.pdf" target="_blank"><img class="pdf"></a>
+		<div id="meeting" class="section-content">
+			<div class="file">
+				<div class="file-name">
+					<span><a href="#" class="alink" onClick="MyWindow=window.open('flats/flat-history.html','Flat','width=500,height=700'); return false;">Собрание 29.01.2020</a></span>
+				</div>
 			</div>
-			<div class="file-name">
-				<span>КОМПЛЕКТ. Жилой дом</span>
+			
+			<div class="file">
+				<div class="file-name">
+					<span><a href="#" class="alink" onClick="MyWindow=window.open('flats/flat-history.html','Flat','width=500,height=700'); return false;">Собрание 29.01.2019</a></span>
+				</div>
 			</div>
+		</div>
+		<!-- End Section Meetings -->
+		
+		<!-- Section Declaration -->
+		<div class="section"> 
+			<a id="apd" class="alink" onclick="showGallery('pd')">Проектные декларации</a>
 		</div>
 		
-		<div class="file">
-			<div class="file-icon">
-				<a href="../resources/files/floor_map.jpg" target="_blank"><img class="picture"></a>
+		<div id="pd" class="section-content">
+			<div class="file">
+				<div class="file-icon">
+					<a href="../resources/files/pd1.jpg" target="_blank"><img class="picture"></a>
+				</div>
+				<div class="file-name">
+					<span><a href="../resources/files/pd1.jpg" class="alink" target="_blank">Проектная декларация (2018)</a></span>
+				</div>
 			</div>
-			<div class="file-name">
-				<span>План этажа</span>
+			
+			<div class="file">
+				<div class="file-icon">
+					<a href="../resources/files/pd1.jpg" target="_blank"><img class="picture"></a>
+				</div>
+				<div class="file-name">
+					<span><a href="../resources/files/pd1.jpg" class="alink" target="_blank">Проектная декларация (2018)</a></span>
+				</div>
 			</div>
 		</div>
-		
-		<div class="file">
-			<div class="file-icon">
-				<a href="../resources/files/pd1.jpg" target="_blank"><img class="picture"></a>
-			</div>
-			<div class="file-name">
-				<span>Проектная декларация (2018)</span>
-			</div>
-		</div>
+		<!-- End Section Declaration -->
 		
 	</div>
 	
 	<div class="footer fixed">
 		<p>© Калининградский, 2024</p>
 	</div>
+	
+	<script>
+		var slideIndex1 = 1;
+		var slideIndex2 = 1;
+		var slideIndex3 = 1;
+		
+		function showGallery(id) {
+			var element = document.getElementById(id);
+			var displayStyle = element.style.display;
+			
+			var aelement = document.getElementById("a"+id);
+			var isActiveClass = aelement.classList.contains("active");
+			
+			const collection = document.getElementsByClassName("section-content");
+						
+			if (displayStyle !== 'block') {
+				element.style.display = 'block';
+			} else {
+				element.style.display = 'none';
+			}
+			
+			if (!isActiveClass) {
+				aelement.classList.add("active");
+			} else {
+				aelement.classList.remove("active");
+			}
+			
+		}
+	</script>
 	
 </body>
 </html>

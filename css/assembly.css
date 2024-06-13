@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: Arial;
+	font-size: 13px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-image: url("../resources/images/background/bg-assembly.jpg");
+}
+.flat {
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 50px;
+}
+h3, hr {
+	color: #FF4000;
+}
+table.main td {
+	border: 0px;
+	padding-top: 5px;
+	vertical-align: top;
+}
+span.info {
+	font-size: 80%;
+}
+td.title {
+	padding-right: 10px;
+}
+.title {
+	font-weight: bold;
+}

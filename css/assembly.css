@@ -8,18 +8,40 @@ body {
 	background-size: cover;
 	background-image: url("../resources/images/background/bg-assembly.jpg");
 }
-.flat {
+.assembly {
 	padding-left: 5%;
 	padding-right: 5%;
-	padding-bottom: 50px;
+	padding-bottom: 25px;
+}
+table {
+	margin-top: 10px;
+	margin-bottom: 15px;
+	width: 100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+	text-align: center;
+	font-size: 85%;
+}
+th, td {
+	width: 15%;
+	padding: 3px;
+}
+th {
+	background-color: #ebdbd6;
+}
+.question {
+	width: 65%;
+	text-align: left;
 }
 h3, hr {
 	color: #FF4000;
 }
-table.main td {
-	border: 0px;
+div.main {
 	padding-top: 5px;
 	vertical-align: top;
+	text-align: justify;
 }
 span.info {
 	font-size: 80%;
@@ -29,4 +51,10 @@ td.title {
 }
 .title {
 	font-weight: bold;
+}
+ul {
+	padding-left: 3%;
+}
+li {
+	padding-bottom: 4px;
 }
